@@ -1,14 +1,14 @@
-var express = require('express');
-const app = require('../app');
+var express = require("express");
+const app = require("../app");
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res, next) {
+  res.render("index", { title: "Express" });
 });
 
-app.post('/', (req, res) => {
-  res.sender('POST request to the homepage')
+router.post("/", function (req, res, next) {
+  res.render("index", { title: "Express" });
 });
 
 module.exports = router;

@@ -6,25 +6,15 @@ const mysql = require('mysql');
 var connection = mysql.createConnection({
     dialect: "mysql",
     port: "3306",
-    host: "192.168.1.73",
+    host: "localhost",
     insecureAuth: true,
-    user: "emon_tf",
-    password: "emon_tf2x5=10",
-    database: "BESSCDAPLatihan"
-  });
-
-var connection2 = mysql.createConnection({
-    dialect: "mysql",
-    port: "3306",
-    host: "192.168.1.73",
-    insecureAuth: true,
-    user: "emon_tf",
-    password: "emon_tf2x5=10",
-    database: "BESSCDAPLatihan" //database yang lain disini
+    user: "root",
+    password: "root",
+    database: "bois"
   });
 
   //fungsi untuk menghbungkannya
-  conection.connect(function(err){ //
+  connection.connect(function(err){ //
       if(!!err){
           console.log(err);
       }
@@ -33,15 +23,5 @@ var connection2 = mysql.createConnection({
       }
   }); 
 
-  connection2.connect(function(err){ 
-      if(!!err){
-          console.log()
-      }
-      else{
-          console.log("connection2 connected");
-      }
-  });
-
 module.exports = connection; 
-module.exports = connection2; 
 // Baby step connection udah bisa 
